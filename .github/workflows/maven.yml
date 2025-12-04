@@ -24,6 +24,12 @@ jobs:
       - name: Build and Test with Maven
         run: mvn clean verify --batch-mode
 
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: target-classes
+          path: target/classes
+
   sonar:
     runs-on: ubuntu-latest
     needs: build
