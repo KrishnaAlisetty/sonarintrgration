@@ -43,6 +43,12 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
           cache: maven
+      # Download build artifacts from the build job
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: build-artifacts
+          path: target
 
       - name: SonarQube Scan
         env:
