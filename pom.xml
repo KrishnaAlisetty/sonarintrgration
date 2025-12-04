@@ -31,7 +31,6 @@
         <sonar.projectKey>demo</sonar.projectKey>
         <sonar.projectName>Demo Java Project</sonar.projectName>
         <sonar.host.url>http://localhost:9000</sonar.host.url>
-        <sonar.login>squ_e0f8daad03f81ffd10766add036da09c225d220c</sonar.login>
         <sonar.language>java</sonar.language>
 
         <!-- Jacoco report path -->

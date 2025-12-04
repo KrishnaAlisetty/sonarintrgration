@@ -8,10 +8,10 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(MockitoExtension.class)
-public class UserTest {
+class UserTest {
 
     @Test
-    public void test(){
+    void test(){
         User tesClass = new User();
         tesClass.setName("fdsfds");
         assertEquals("fdsfds", tesClass.getName());
