@@ -45,8 +45,8 @@ jobs:
       - name: Download Build Artifacts
         uses: actions/download-artifact@v4
         with:
-          name: build-artifacts
-          path: target
+          name: maven-repo
+          path: ~/.m2/repository
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
