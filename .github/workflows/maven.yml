@@ -25,8 +25,11 @@ jobs:
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: maven-repo
-          path: ~/.m2/repository
+          name: build-artifacts
+          path: |
+            target/classes
+            target/test-classes
+            target/site/jacoco/jacoco.xml
 
   sonar:
     runs-on: ubuntu-latest
@@ -45,8 +48,8 @@ jobs:
       - name: Download Build Artifacts
         uses: actions/download-artifact@v4
         with:
-          name: maven-repo
-          path: ~/.m2/repository
+          name: build-artifacts
+          path: target
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
