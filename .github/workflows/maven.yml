@@ -8,9 +8,7 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
@@ -21,14 +19,17 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: Build and Test with Maven
-        run: mvn clean verify --batch-mode
+      - name: Build and Test
+        run: mvn clean install -Pcoverage --batch-mode
 
-      - name: Upload build artifacts
+      - name: Upload Build Artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: target-classes
-          path: target/classes
+          name: build-artifacts
+          path: |
+            target/classes
+            target/test-classes
+            target/site/jacoco/jacoco.xml
 
   sonar:
     runs-on: ubuntu-latest
