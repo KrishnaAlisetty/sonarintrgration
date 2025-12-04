@@ -1,6 +1,6 @@
 package com.example.demo;
 
-public class TesClass {
+public class User {
     public String getName() {
         return name;
     }
