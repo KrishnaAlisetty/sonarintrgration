@@ -28,16 +28,11 @@
     </scm>
     <properties>
         <java.version>21</java.version>
-     <!--   <sonar.projectKey>demo</sonar.projectKey>
-        <sonar.projectName>Demo Java Project</sonar.projectName>
-        <sonar.host.url>http://localhost:9000</sonar.host.url>
-        <sonar.language>java</sonar.language>
-
-        &lt;!&ndash; Jacoco report path &ndash;&gt;
+        <!-- Jacoco report path -->
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
         <sonar.coverage.jacoco.xmlReportPaths>
             ${project.basedir}/target/site/jacoco/jacoco.xml
-        </sonar.coverage.jacoco.xmlReportPaths>-->
+        </sonar.coverage.jacoco.xmlReportPaths>
         <!--  test-->
     </properties>
     <dependencyManagement>
