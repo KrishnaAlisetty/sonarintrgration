@@ -40,5 +40,5 @@ jobs:
       - name: SonarQube Scan
         env:
           SONAR_TOKEN: squ_e0f8daad03f81ffd10766add036da09c225d220c
-        run: mvn sonar:sonar -Dsonar.projectKey=demo -Dsonar.host.url=https://preposterous-dilemmatical-shemika.ngrok-free.dev -Dsonar.login=squ_e0f8daad03f81ffd10766add036da09c225d220c
+        run: mvn sonar:sonar -Dsonar.projectKey=demo -Dsonar.host.url=https://preposterous-dilemmatical-shemika.ngrok-free.dev -Dsonar.login=squ_e0f8daad03f81ffd10766add036da09c225d220c -Dsonar.java.binaries=target/classes
 
